@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"mymodule/exportpackage"
+	"github.com/barani129/goprojects/exportpackage"
 )
 
 func main() {
