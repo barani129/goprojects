@@ -4,14 +4,15 @@ import (
 "fmt"
 "log"
 "os"
-"github.com/x/term"
+"golang.org/x/term"
 )
 
 func main() {
-fmt.Printf("Please enter your password: ")
-data, err := term.ReadPassword(os.Stdin.Fd())
+fmt.Printf("Please enter your password: \n")
+data, err := term.ReadPassword(int(os.Stdin.Fd()))
 if err != nil {
 log.Fatal(err)
 }
-fmt.Println(data)
+fmt.Println("Reading your password")
+fmt.Println(string(data))
 }
